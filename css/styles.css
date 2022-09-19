@@ -246,6 +246,10 @@ body {
   text-transform: uppercase;
 }
 
+.advantage-item:not(:last-child) {
+    margin-right: 30px;
+}
+
 .advantage-list {
   display: flex;
   text-align: left;
@@ -260,9 +264,7 @@ body {
   justify-content: center;
   border-radius: 4px;
 }
-.adv-icon:not(:last-child) {
-  margin-right: 30px;
-}
+
 
 .adv-svg {
   width: 67px;
