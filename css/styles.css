@@ -8,6 +8,9 @@
   --hero-color: #2f303a;
   --social-svg-color: #afb1b8;
   --advantage-bg-color: #f5f4fa;
+  --client-color: #afb1b8;
+  --footer-linf-social:rgba(255, 255, 255, 0.1);
+
 }
 
 h1,
@@ -182,11 +185,14 @@ body {
     url(../image/hero-img.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-title {
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin: auto;
+  
+  max-width: 690px;
+  align-items: center;
 
   color: var(--primery-background-color);
   font-weight: 900;
@@ -198,15 +204,16 @@ body {
 
 .hero-btn {
   display: inline-block;
-  /*робимо із посилання (рядк.ел)>рядково-блочний для спрощеня позиціонування*/
+  margin-top: 30px;
+  
   border-radius: 4px;
-  /*задаємо характерного заокруглення для кнопки*/
+
   padding: 10px 32px;
-  /* забиваємо вату*/
+
   min-width: 216px;
-  /*коректно спрацює перенаповнення,текст не переносится*/
+
   text-align: center;
-  /*центрування тексту в середині кнопки*/
+
 
   background-color: var(--accent-color);
   color: var(--primery-background-color);
@@ -353,6 +360,7 @@ body {
   justify-content: center;
   align-items: center;
   padding-bottom: 30px;
+  margin-top: 16px;
 }
 
 .social-link {
@@ -360,6 +368,7 @@ body {
   width: 44px;
   height: 44px;
   display: flex;
+  border-radius: 50%;
   justify-content: center;
 }
 
@@ -369,6 +378,8 @@ body {
   background: var(--accent-color);
   border-radius: 50%;
 }
+
+
 
 .team-employee {
   margin-bottom: 10px;
@@ -389,10 +400,15 @@ body {
 }
 
 /* CLIENT*/
+.client {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+}
 
 .client-title {
   color: var(--secondary-text-color);
-  padding-top: 94px;
+  
   margin-bottom: 50px;
   text-align: center;
   font-weight: 700;
@@ -404,7 +420,7 @@ body {
 .client-list {
   display: flex;
   align-items: center;
-  padding-bottom: 94px;
+  
 }
 
 .client-item:not(:last-child) {
@@ -418,9 +434,9 @@ body {
   align-items: center;
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--client-color);
   border-radius: 4px;
-  fill: #afb1b8;
+  fill: var(--client-color);
 }
 
 .client-link:hover,
@@ -431,6 +447,7 @@ body {
 
 .client-icon {
   width: 102px;
+  height: 60px;
 }
 
 /* FOOTER */
@@ -508,11 +525,10 @@ body {
 
 .footer-link {
   display: flex;
-}
-
-.footer-li {
   margin-top: 20px;
 }
+
+
 .footer-li:not(:last-child) {
   margin-right: 10px;
 }
@@ -523,7 +539,7 @@ body {
   height: 44px;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--footer-linf-social);
   border-radius: 50%;
 }
 
