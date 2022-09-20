@@ -9,8 +9,7 @@
   --social-svg-color: #afb1b8;
   --advantage-bg-color: #f5f4fa;
   --client-color: #afb1b8;
-  --footer-linf-social:rgba(255, 255, 255, 0.1);
-
+  --footer-linf-social: rgba(255, 255, 255, 0.1);
 }
 
 h1,
@@ -190,7 +189,7 @@ body {
 
 .hero-title {
   margin: auto;
-  
+
   max-width: 690px;
   align-items: center;
 
@@ -205,15 +204,12 @@ body {
 .hero-btn {
   display: inline-block;
   margin-top: 30px;
-  
   border-radius: 4px;
-
   padding: 10px 32px;
 
   min-width: 216px;
 
   text-align: center;
-
 
   background-color: var(--accent-color);
   color: var(--primery-background-color);
@@ -254,7 +250,7 @@ body {
 }
 
 .advantage-item:not(:last-child) {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 .advantage-list {
@@ -271,7 +267,6 @@ body {
   justify-content: center;
   border-radius: 4px;
 }
-
 
 .adv-svg {
   width: 67px;
@@ -379,8 +374,6 @@ body {
   border-radius: 50%;
 }
 
-
-
 .team-employee {
   margin-bottom: 10px;
   color: var(--secondary-text-color);
@@ -403,12 +396,11 @@ body {
 .client {
   padding-top: 94px;
   padding-bottom: 94px;
-
 }
 
 .client-title {
   color: var(--secondary-text-color);
-  
+
   margin-bottom: 50px;
   text-align: center;
   font-weight: 700;
@@ -420,7 +412,6 @@ body {
 .client-list {
   display: flex;
   align-items: center;
-  
 }
 
 .client-item:not(:last-child) {
@@ -527,7 +518,6 @@ body {
   display: flex;
   margin-top: 20px;
 }
-
 
 .footer-li:not(:last-child) {
   margin-right: 10px;
