@@ -609,16 +609,17 @@ body {
 /* footer form */
 .footer-form {
   margin-left: 93px;
+  color: var(--advantage-bg-color);
 }
 
 .footer-mail {
   color: var(--primery-background-color);
-  height: 16px;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.1;
   margin-bottom: 20px;
-  display: block;
+  
+
   font-weight: 700;
 }
 
@@ -634,12 +635,11 @@ body {
   border-radius: 4px;
   display: block;
   margin-right: 12px;
-  outline: none;
+  padding: 15px;
+  color: var(--primery-background-color);
 }
 
-.input::placeholder {
-  padding: 15px;
-}
+
 
 .fotter-btn {
   position: relative;
@@ -659,6 +659,11 @@ body {
   padding-right: 28px;
   cursor: pointer;
 }
+.fotter-btn:hover,
+.fotter-btn:focus {
+  background: rgba(24, 140, 232, 1);
+}
+
 .footer-icon-send {
   position: absolute;
   width: 24px;
@@ -795,7 +800,7 @@ body {
 
 .overlay-text {
   color: var(--primery-background-color);
-  font-weight: 400;
+  
   font-size: 18px;
   line-height: 1.5;
   padding: 64px 24px;
@@ -839,8 +844,7 @@ body {
   letter-spacing: 0.03em;
   font-weight: 700;
   color: var(--secondary-text-color);
-  padding-top: 40px;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .is-hidden {
@@ -876,17 +880,17 @@ body {
 }
 
 .modal-form {
-  padding-left: 40px;
-  padding-right: 40px;
+padding: 40px;
 }
 
 .form-element {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .form-label {
-  font-weight: 400;
+  
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
@@ -902,14 +906,15 @@ body {
   outline: none;
   margin-bottom: 20px;
   transition: border var(--transition-duration) var(--transition-timing-function) ;
+  padding: 12px 16px;
 }
 .form-coment:focus {
   border: 1px solid var(--accent-color);
 }
 
 .form-coment::placeholder {
-  padding: 12px 16px;
-  font-weight: 400;
+  
+  
 
   font-size: 12px;
   line-height: 1.2;
@@ -921,7 +926,7 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 40px;
-  margin-bottom: 10px;
+  
   outline: none;
   width: 100%;
   padding-left: 42px;
@@ -939,18 +944,24 @@ body {
 .form-button {
   width: 200px;
   height: 50px;
-  background: var(--accent-color);
+  background: rgba(33, 150, 243, 1);
   border-radius: 4px;
   border: none;
   color: var(--primery-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.9px;
+  line-height: 1.9;
   letter-spacing: 0.06em;
   margin: 0 auto;
   display: block;
   margin-top: 30px;
+  cursor: pointer;
+}
+
+.form-button:hover,
+.form-button:focus {
+  background: rgba(24, 140, 232, 1);
 }
 
 .form-checkbox {
@@ -960,7 +971,7 @@ body {
 }
 
 .form-check {
-  font-weight: 400;
+ 
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -972,7 +983,23 @@ body {
 
 .modal-link {
   color: var(--accent-color);
+  text-decoration: none;
+  position: relative;
+
 }
+.modal-link::after {
+  position: absolute;
+  display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: 4px;
+    right: 0;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+
+
 .input-wrap {
   position: relative;
 }
@@ -981,7 +1008,7 @@ body {
 
   left: 15px;
   top: 50%;
-  transform: translateY(-75%);
+  transform: translateY(-50%);
   width: 18px;
   height: 18px;
   transition: fill var(--transition-timing-function) var(--transition-duration);
