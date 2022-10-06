@@ -1027,7 +1027,7 @@ padding: 40px;
 }
 
 
-.checkbox {
+.icon-checkbox {
   border: 2px solid var(--secondary-text-color);
   width: 15px;
   height: 15px;
@@ -1039,16 +1039,16 @@ padding: 40px;
   transition: background var(--transition-duration) var(--transition-timing-function) ;
 }
 
-.checkbox svg {
+.icon-checkbox svg {
   display: none;
 }
 
-.accept input:focus:checked + label .checkbox {
+.accept input:focus:checked + label .icon-checkbox {
   background: var(--accent-color);
   border: none;
 }
 
-.accept input:focus:checked + label .checkbox svg {
+.accept input:focus:checked + label .icon-checkbox svg {
   display: block;
 }
 
