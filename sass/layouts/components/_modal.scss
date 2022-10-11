@@ -1,0 +1,202 @@
+.modal {
+  @include size(530px, 580px);
+
+  background-color: var(--primery-background-color);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__close-button {
+    @include size(30px, 30px);
+
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background-color: var(--primery-background-color);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: fill var(--transition-duration)
+      var(--transition-timing-function);
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+
+  &__close-button {
+    @include size(30px, 30px);
+
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background-color: var(--primery-background-color);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: fill var(--transition-duration)
+      var(--transition-timing-function);
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+
+    &__close-button--x {
+      @include size(18px, 18px);
+    }
+  }
+
+  &__form {
+    padding: 40px;
+  }
+
+  &__title {
+    @include font(20px, 700, 1, 0.03);
+    text-align: center;
+    color: var(--secondary-text-color);
+    margin-bottom: 10px;
+  }
+
+  &__elements {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  &__elements input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    outline: none;
+    width: 100%;
+    padding-left: 42px;
+    transition: border var(--transition-timing-function)
+      var(--transition-duration);
+    &:focus {
+      border: 1px solid var(--accent-color);
+    }
+    &:focus + svg {
+      fill: var(--accent-color);
+    }
+  }
+
+  &__elements svg {
+    @include size(18px, 18px);
+
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    transition: fill var(--transition-timing-function)
+      var(--transition-duration);
+  }
+
+  &__label {
+    @include font(12px, 400, 1.1, 0.01em);
+
+    color: var(--primery-text-color);
+    margin-bottom: 4px;
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__coment {
+    @include size(448px, 120px);
+
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 20px;
+    transition: border var(--transition-duration)
+      var(--transition-timing-function);
+    padding: 12px 16px;
+    &:focus {
+      border: 1px solid var(--accent-color);
+    }
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+
+  &__accept {
+    display: flex;
+    align-items: center;
+  }
+  &__accept input:focus:checked + label .modal__checkbox {
+    background: var(--accent-color);
+    border: none;
+  }
+  &__accept input:focus:checked + label .modal__checkbox svg {
+    display: block;
+  }
+
+  &__accert-label {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+  &__checkbox {
+    @include size(15px, 15px);
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+    transition: background var(--transition-duration)
+      var(--transition-timing-function);
+  }
+  &__accept--link {
+    color: var(--accent-color);
+    text-decoration: none;
+    position: relative;
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      bottom: 4px;
+      right: 0;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+  }
+
+  &__button--send {
+    @include size(200px, 50px);
+    background: rgba(33, 150, 243, 1);
+    border-radius: 4px;
+    border: none;
+    color: var(--primery-background-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: rgba(24, 140, 232, 1);
+    }
+  }
+}
