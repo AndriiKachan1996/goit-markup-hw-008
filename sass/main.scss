@@ -14,11 +14,6 @@
 @import "./layouts/pageHeader/headerNav";
 @import "./layouts/pageHeader/headerSocial";
 
-@import "./layouts/pageFooter/footer";
-@import "./layouts/pageFooter/footerAdress";
-@import "./layouts/pageFooter/footerForm";
-@import "./layouts/pageFooter/footerJoin";
-
 @import "./layouts/hero";
 @import "./layouts/preference";
 @import "./layouts/work";
@@ -26,6 +21,11 @@
 @import "./layouts/client";
 @import "./layouts/footer";
 @import "./layouts/portfolio";
+
+@import "./layouts/pageFooter/footer";
+@import "./layouts/pageFooter/footerAdress";
+@import "./layouts/pageFooter/footerForm";
+@import "./layouts/pageFooter/footerJoin";
 
 // COMPONENTS
 @import "./layouts/components/modal";
