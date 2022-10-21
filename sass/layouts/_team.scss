@@ -1,40 +1,69 @@
 .team {
-  background-color: var(--secondary-background-color);
-  padding: 94px 0;
+  background-color: $color-secondary-background;
+  padding: 60px 0;
+
+  @include desktop {
+    padding: 94px 0;
+  }
 
   &__list {
-    display: flex;
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 1199px) {
+      gap: 30px;
+    }
   }
 
   &__item {
     background-color: var(--primery-background-color);
-    width: calc((100% - 90px) / 4);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    &:not(:first-child) {
-      margin-left: 30px;
+    @include tablet {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @include desktop {
+      width: calc((100% - 90px) / 4);
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+    }
+
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
     }
   }
 
   &__photo {
     display: block;
+    width: 100%;
   }
 
   &__info {
     padding-top: 30px;
+    padding-bottom: 24px;
     text-align: center;
   }
 
   &__person {
     @include font(16px, 500, 1.2, 0.03em);
+
     margin-bottom: 10px;
-    color: var(--secondary-text-color);
+    color: $color-primary-text;
   }
 
   &__profile {
     @include font(16px, 400, 1.2, 0.03em);
+
+    color: $color-secondary-text;
+    margin-bottom: 16px;
   }
 }
 
@@ -42,8 +71,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 30px;
-  margin-top: 16px;
 
   &__item:not(:last-child) {
     margin-right: 10px;
@@ -52,36 +79,18 @@
   &__link {
     @include size(44px, 44px);
 
-    fill: var(--social-svg-color);
+    fill: $color-icon;
     display: flex;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    transition: fill var(--transition-duration)
-        var(--transition-timing-function),
-      background var(--transition-duration) var(--transition-timing-function);
+    transition: fill $duration $timing-function,
+      background $duration $timing-function;
 
     &:hover,
     &:focus {
-      fill: var(--primery-background-color);
-      background: var(--accent-color);
-    }
-  }
-
-  &__link {
-    @include size(44px, 44px);
-    fill: var(--social-svg-color);
-    display: flex;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    transition: fill var(--transition-duration)
-        var(--transition-timing-function),
-      background var(--transition-duration) var(--transition-timing-function);
-    &:hover,
-    &:focus {
-      fill: var(--primery-background-color);
-      background: var(--accent-color);
+      fill: $color-white;
+      background: $color-accent;
     }
   }
 }

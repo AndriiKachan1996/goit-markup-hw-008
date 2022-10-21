@@ -1,0 +1,22 @@
+.header {
+  border-bottom: 1px solid $color-header-border;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+  }
+
+  @include tablet {
+    min-height: 80px;
+
+    &__logo {
+      margin-right: 88px;
+
+      @include desktop {
+        @include font(26px, 700, 1.2, 0.03em);
+        margin-right: 93px;
+      }
+    }
+  }
+}

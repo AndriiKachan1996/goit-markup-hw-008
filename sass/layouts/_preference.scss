@@ -1,17 +1,39 @@
 .preference {
-  padding: 94px 0;
+  padding: 60px 0;
 
-  &__list {
-    display: flex;
+  @include desktop {
+    padding: 94px 0;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__list {
+    width: 100%;
+
+    @include tablet {
+      display: flex;
+      gap: 30px;
+    }
+
+    @include desktop {
+    }
+
+    @media screen and (max-width: 1199px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      width: calc((100% - 30px) / 2);
+    }
   }
 
   &__poster {
     @include size(270px, 120px);
-    background-color: var(--advantage-bg-color);
+    width: 100%;
+    background-color: $color-secondary-background;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
@@ -25,14 +47,20 @@
   &__title {
     @include font(14px, 700, 1.1, 0.03em);
 
+    text-align: center;
     font-style: normal;
     margin-bottom: 10px;
-    color: var(--secondary-text-color);
+    color: $color-primary-text;
     text-transform: uppercase;
+
+    @include tablet {
+      text-align: left;
+    }
   }
 
   &__text {
     @include font(14px, 400, 1.7, 0.03em);
-    font-style: normal;
   }
+
+  color: $color-secondary-text;
 }

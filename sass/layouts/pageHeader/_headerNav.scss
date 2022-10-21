@@ -1,0 +1,64 @@
+.nav {
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    @include tablet {
+      display: flex;
+      height: 100%;
+    }
+  }
+}
+
+.nav__item {
+  @include mobileMax {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.nav__link {
+  @include font(40px, 500, 1.1, 0.02em);
+
+  position: relative;
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: inherit;
+  transition: color $duration $timing-function;
+
+  @media screen and (min-width: 768px) {
+    @include font(14px, 500, 1.1, 0.02em);
+    padding: 32px 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+
+  &--current {
+    color: $color-accent;
+  }
+
+  &--current::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $color-accent;
+    border-radius: 2px;
+  }
+}

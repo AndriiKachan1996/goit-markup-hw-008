@@ -1,43 +1,93 @@
 .hero {
-  @include size(1600px, 600px);
-  background-color: var(--hero-color);
-  padding: 200px 0;
+  background-color: $color-primary-background;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../image/hero-img.jpg);
+  background-image: linear-gradient($color-hero-overlay, $color-hero-overlay),
+    url(/image/HERO/hero-img-1-mob-x1.jpg);
+
+  @include retina {
+    background-image: linear-gradient($color-hero-overlay, $color-hero-overlay),
+      url(/image/HERO/hero-img-1-mob-2x.jpg);
+  }
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include tablet {
+    background-image: linear-gradient($color-hero-overlay, $color-hero-overlay),
+      url(/image/HERO/hero-img-1-tab-x1.jpg);
+
+    @include retina {
+      background-image: linear-gradient(
+          $color-hero-overlay,
+          $color-hero-overlay
+        ),
+        url(/image/HERO/hero-img-1-tab-2x.jpg);
+    }
+
+    @include desktop {
+      background-image: linear-gradient(
+          $color-hero-overlay,
+          $color-hero-overlay
+        ),
+        url(/image/HERO/hero-img-1-desc-x1.jpg);
+
+      @include retina {
+        background-image: linear-gradient(
+            $color-hero-overlay,
+            $color-hero-overlay
+          ),
+          url(/image/HERO/hero-img-1-desc-2x.jpg);
+      }
+    }
+  }
+
+  &__wrap {
+    padding: 118px 60px 118px 60px;
+
+    @include tablet {
+      padding: 118px 204px;
+    }
+
+    @include desktop {
+      padding: 200px 0;
+    }
+  }
+
   &__title {
-    @include font(44px, 900, 1.4, 0.06em);
+    @include font(26px, 900, 1.6, 0.06em);
 
     margin: auto;
-    max-width: 690px;
     align-items: center;
-    color: var(--primery-background-color);
+    color: $color-white;
     text-transform: uppercase;
+
+    @include desktop {
+      @include font(44px, 900, 1.4, 0.06em);
+
+      max-width: 690px;
+    }
   }
 
   &__button {
     @include font(16px, 700, 1.9, 0.06em);
+
     display: inline-block;
     margin-top: 30px;
     border-radius: 4px;
     padding: 10px 32px;
     min-width: 216px;
     text-align: center;
-    background-color: var(--accent-color);
-    color: var(--primery-background-color);
+    background-color: $color-accent;
+    color: $color-white;
     font-family: "Roboto", sans-serif;
     cursor: pointer;
-
     border: none;
-    transition: var(--transition-timing-function) var(--transition-duration);
+    transition: $timing-function $duration;
+    &:hover,
+    &:focus {
+      background: $color-accent-active;
+    }
   }
 }

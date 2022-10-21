@@ -1,16 +1,25 @@
-:root {
-    --primery-text-color: #757575;
-    --secondary-text-color: #212121;
-    --accent-color: #2196f3;
-    --primery-background-color: #ffffff;
-    --secondary-background-color: #f5f4fa;
-    --main-border-color: #ececec;
-    --hero-color: #2f303a;
-    --social-svg-color: #afb1b8;
-    --advantage-bg-color: #f5f4fa;
-    --client-color: #afb1b8;
-    --footer-linf-social: rgba(255, 255, 255, 0.1);
-    --overlay-background: rgba(33, 150, 243, 0.9);
-    --transition-duration: 250ms;
-    --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+$color-accent: #2196f3;
+$color-accent-active: #188ce8;
+$color-accent-op: #2196f3e6;
+$color-black: #000000;
+$color-gallery-border: #eeeeee;
+$color-header-border: #ececec;
+$color-hero-background: #c4c4c4;
+$color-hero-overlay: #2f303a66;
+$color-icon: #afb1b8;
+$color-modal-border: #21212133;
+$color-modal-close: #0000001a;
+$color-modal-overlay: #00000033;
+$color-primary-background: #2f303a;
+$color-primary-text: #212121;
+$color-secondary-background: #f5f4fa;
+$color-secondary-text: #757575;
+$color-secondary-text-op: #75757580;
+$color-whatwedo-overlay: #2f303acc;
+$color-white: #ffffff;
+$color-white-op: #ffffff99;
+$color-white-overlay: #ffffff1a;
+$color-white-subscribe: #ffffff4d;
+
+$duration: 250ms;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);

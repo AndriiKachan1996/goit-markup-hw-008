@@ -1,0 +1,78 @@
+.contacts-header {
+  display: flex;
+
+  @include mobileMax {
+    flex-direction: column-reverse;
+    margin-top: auto;
+    margin-bottom: 64px;
+  }
+
+  @include tabletMax {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: auto;
+  }
+
+  @include desktop {
+    margin-left: auto;
+  }
+
+  &__icon {
+    @include mobileMax {
+      display: none;
+    }
+
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+.contacts-header__item {
+  @include mobileMax {
+    &:not(:last-child) {
+      margin-top: 32px;
+    }
+  }
+
+  @include tabletMax {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include desktop {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.contacts-header__link {
+  @include font(24px, 500, 1.2, 0.02em);
+
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $color-secondary-text;
+  transition: color $duration $timing-function;
+
+  @include tablet {
+    @include font(12px, 500, 1.2, 0.02em);
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+  }
+  @include desktop {
+    @include font(14px, 500, 1.2, 0.02em);
+  }
+}
+
+.contacts-header__link[href^="tel"] {
+  @include mobileMax {
+    color: $color-accent;
+    font-size: min(34px, 10vw);
+    white-space: nowrap;
+  }
+}

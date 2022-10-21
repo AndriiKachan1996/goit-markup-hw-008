@@ -1,32 +1,14 @@
 .modal {
-  @include size(530px, 580px);
-
-  background-color: var(--primery-background-color);
+  @include size(450px, 609px);
+  background-color: $color-white;
   border-radius: 4px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  &__close-button {
-    @include size(30px, 30px);
-
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    background-color: var(--primery-background-color);
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: fill var(--transition-duration)
-      var(--transition-timing-function);
-    &:hover,
-    &:focus {
-      fill: var(--accent-color);
-    }
+  @include desktop {
+    @include size(528px, 581px);
   }
 
   &__close-button {
@@ -35,23 +17,22 @@
     position: absolute;
     right: 8px;
     top: 8px;
-    background-color: var(--primery-background-color);
+    background-color: $color-white;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid $color-modal-close;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: fill var(--transition-duration)
-      var(--transition-timing-function);
+    transition: fill $duration $timing-function;
     &:hover,
     &:focus {
-      fill: var(--accent-color);
+      fill: $color-accent;
     }
+  }
 
-    &__close-button--x {
-      @include size(18px, 18px);
-    }
+  &--x {
+    @include size(18px, 18px);
   }
 
   &__form {
@@ -61,7 +42,7 @@
   &__title {
     @include font(20px, 700, 1, 0.03);
     text-align: center;
-    color: var(--secondary-text-color);
+    color: $color-black;
     margin-bottom: 10px;
   }
 
@@ -72,19 +53,18 @@
   }
 
   &__elements input {
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid $color-modal-close;
     border-radius: 4px;
     height: 40px;
     outline: none;
     width: 100%;
     padding-left: 42px;
-    transition: border var(--transition-timing-function)
-      var(--transition-duration);
+    transition: border $timing-function $duration;
     &:focus {
-      border: 1px solid var(--accent-color);
+      border: 1px solid $color-accent;
     }
     &:focus + svg {
-      fill: var(--accent-color);
+      fill: $color-accent;
     }
   }
 
@@ -96,14 +76,13 @@
     top: 50%;
     transform: translateY(-50%);
 
-    transition: fill var(--transition-timing-function)
-      var(--transition-duration);
+    transition: fill $timing-function $duration;
   }
 
   &__label {
     @include font(12px, 400, 1.1, 0.01em);
 
-    color: var(--primery-text-color);
+    color: $color-secondary-text;
     margin-bottom: 4px;
   }
 
@@ -112,24 +91,23 @@
   }
 
   &__coment {
-    @include size(448px, 120px);
+    height: 120px;
 
     resize: none;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid $color-modal-close;
     border-radius: 4px;
     outline: none;
     margin-bottom: 20px;
-    transition: border var(--transition-duration)
-      var(--transition-timing-function);
+    transition: border $duration $timing-function;
     padding: 12px 16px;
     &:focus {
-      border: 1px solid var(--accent-color);
+      border: 1px solid $color-accent;
     }
     &::placeholder {
       font-size: 12px;
       line-height: 1.2;
       letter-spacing: 0.01em;
-      color: rgba(117, 117, 117, 0.5);
+      color: $color-secondary-text-op;
     }
   }
 
@@ -138,7 +116,7 @@
     align-items: center;
   }
   &__accept input:focus:checked + label .modal__checkbox {
-    background: var(--accent-color);
+    background: $color-accent;
     border: none;
   }
   &__accept input:focus:checked + label .modal__checkbox svg {
@@ -146,47 +124,50 @@
   }
 
   &__accept-label {
-    @include font(14px, 400, 1.7, 0.03em);
-
+    @include font(12px, 400, 1.2, 0.03em);
     display: flex;
     align-items: center;
     margin: 0 auto;
+
+    @include desktop {
+      @include font(14px, 400, 1.7, 0.03em);
+    }
   }
   &__checkbox {
     @include size(15px, 15px);
-    border: 2px solid var(--secondary-text-color);
+    border: 2px solid $color-black;
     border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 7px;
-    transition: background var(--transition-duration)
-      var(--transition-timing-function);
+    transition: background $duration $timing-function;
   }
 
-  &__accept--link {
-    color: var(--accent-color);
+  &__accept--blue {
+    color: $color-accent;
     text-decoration: none;
     position: relative;
+    margin-left: 4px;
     &::after {
       position: absolute;
       display: block;
       content: "";
       width: 100%;
       height: 1px;
-      bottom: 4px;
+      bottom: 0;
       right: 0;
-      background-color: var(--accent-color);
-      border-radius: 2px;
+      background-color: $color-accent;
+      border-radius: 1px;
     }
   }
 
   &__button--send {
     @include size(200px, 50px);
-    background: rgba(33, 150, 243, 1);
+    background: $color-accent;
     border-radius: 4px;
     border: none;
-    color: var(--primery-background-color);
+    color: $color-white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     font-weight: 700;
     font-size: 16px;
@@ -199,7 +180,7 @@
 
     &:hover,
     &:focus {
-      background: rgba(24, 140, 232, 1);
+      background: $color-accent-active;
     }
   }
 }

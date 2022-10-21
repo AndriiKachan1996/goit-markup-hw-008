@@ -3,9 +3,22 @@
 @import "./base/mixins";
 @import "./base/common";
 @import "./base/utils";
+@import "./base/сontainer";
 
 // LAYOUTS
-@import "./layouts/header";
+@import "./layouts/pageHeader/header";
+@import "./layouts/pageHeader/headerBurger";
+@import "./layouts/pageHeader/headerButton";
+@import "./layouts/pageHeader/headerContacts";
+@import "./layouts/pageHeader/headerIcon";
+@import "./layouts/pageHeader/headerNav";
+@import "./layouts/pageHeader/headerSocial";
+
+@import "./layouts/pageFooter/footer";
+@import "./layouts/pageFooter/footerAdress";
+@import "./layouts/pageFooter/footerForm";
+@import "./layouts/pageFooter/footerJoin";
+
 @import "./layouts/hero";
 @import "./layouts/preference";
 @import "./layouts/work";

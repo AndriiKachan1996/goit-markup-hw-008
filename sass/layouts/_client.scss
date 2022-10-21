@@ -1,31 +1,65 @@
 .client {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+
+  @include desktop {
+    padding: 94px 0;
+  }
 
   &__list {
     display: flex;
-    align-items: center;
+    margin: -15px;
+
+    @include tablet {
+      margin: -15px;
+    }
+
+    @include desktop {
+      margin: -15px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      flex-wrap: wrap;
+    }
   }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__item {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+
+    @include tablet {
+      flex-basis: calc((100% - 3 * 30px) / 3);
+      margin: 15px;
+    }
+
+    @include desktop {
+      flex-basis: calc((100% - 6 * 30px) / 6);
+      margin: 15px;
+    }
   }
 
   &__link {
-    @include size(170px, 92px);
+    @include size(210px, 92px);
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--client-color);
+    border: 1px solid $color-icon;
     border-radius: 4px;
-    fill: var(--client-color);
-    transition: fill var(--transition-duration)
-        var(--transition-timing-function),
-      border-color var(--transition-duration) var(--transition-timing-function);
+    fill: $color-icon;
+    transition: fill $duration $timing-function,
+      border-color $duration $timing-function;
+
     &:hover,
     &:focus {
-      fill: var(--accent-color);
-      border-color: var(--accent-color);
+      fill: $color-accent;
+      border-color: $color-accent;
+    }
+
+    @include tablet {
+      @include size(226px, 92px);
+    }
+
+    @include desktop {
+      @include size(170px, 92px);
     }
   }
 
