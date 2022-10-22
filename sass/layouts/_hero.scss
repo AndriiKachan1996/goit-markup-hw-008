@@ -4,7 +4,7 @@
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient($color-hero-overlay, $color-hero-overlay),
-    url(././image/HERO/hero-img-1-mob-x1.jpg);
+    url(../image/HERO/hero-img-1-mob-x1.jpg);
 
   @include retina {
     background-image: linear-gradient($color-hero-overlay, $color-hero-overlay),
